@@ -1,0 +1,59 @@
+.logobar .logo-wrap
+{
+    width: 60%;
+    margin: auto;
+    perspective: 1000px;
+    perspective-origin:50% 50%;
+}
+.logobar .logo-wrap .cube
+{
+    transform-style: preserve-3d;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    position: relative;
+}
+.logobar .logo-wrap .cube img
+{
+    position: absolute;
+    opacity: 0.8;
+}
+.logobar .logo-wrap .cube img:nth-child(1)
+{
+    transform: rotateY(0deg) translateZ(25px);
+}
+.logobar .logo-wrap .cube img:nth-child(2)
+{
+    transform: rotateY(90deg) translateZ(25px);
+}
+.logobar .logo-wrap .cube img:nth-child(3)
+{
+    transform: rotateY(180deg) translateZ(25px);
+}
+.logobar .logo-wrap .cube img:nth-child(4)
+{
+    transform: rotateY(-90deg) translateZ(25px);
+}
+.logobar .logo-wrap .cube img:nth-child(5)
+{
+    transform: rotateX(90deg) translateZ(25px);
+}
+.logobar .logo-wrap .cube img:nth-child(6)
+{
+    transform: rotateX(-90deg) translateZ(25px);
+}
+@keyframes loop
+{
+    from{transform: rotateX(0deg) rotateY(0deg);}
+    to{transform: rotateX(360deg) rotatey(360deg);}
+}
+
+.logobar .logo-wrap .cube
+{
+    animation: loop 10s linear infinite;
+}
+.logobar .logo-wrap img
+{
+    height: 50px;
+    width: 50px;
+}

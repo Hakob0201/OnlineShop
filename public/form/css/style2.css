@@ -1,0 +1,1239 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400&display=swap');
+body
+{
+    margin: 0;
+    padding: 0;
+    background-image: url("/form/images/dfdfdfd.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.rain
+{
+    height: 100vh;
+    animation: rain 0.5s linear infinite;
+}
+.rain:before
+{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    animation: lighting 3s linear infinite;
+    opacity: 0;
+}
+@keyframes  rain
+{
+    0%
+    {
+        background-position:0% 0%;
+    }
+    100%
+    {
+        background-position: 10% 100%;
+    }
+}
+/*@keyframes lighting*/
+/*{*/
+/*    0%*/
+/*    {*/
+/*        opacity: 0;*/
+/*    }*/
+/*    10%*/
+/*    {*/
+/*        opacity: 0;*/
+/*    }*/
+/*    11%*/
+/*    {*/
+/*        opacity: 1;*/
+/*    }*/
+/*    14%*/
+/*    {*/
+/*        opacity: 0;*/
+/*    }*/
+/*    20%*/
+/*    {*/
+/*        opacity: 0;*/
+/*    }*/
+/*    21%*/
+/*    {*/
+/*        opacity: 1;*/
+/*    }*/
+/*    24%*/
+/*    {*/
+/*        opacity: 0;*/
+/*    }*/
+/*    104%*/
+/*    {*/
+/*        opacity: 0;*/
+/*    }*/
+/*}*/
+
+
+
+
+
+.form_1
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Consolas;
+}
+.container
+{
+    position: relative;
+    width: 450px;
+    min-height: 300px;
+    background: rgba(255,255,255,0.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,1);
+}
+.container:before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255,0.1);
+    pointer-events: none;
+}
+
+.container:after
+{
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    /*background: linear-gradient(45deg,#ff0047,#6eff00);*/
+    pointer-events: none;
+    animation: animate 10s linear infinite;
+}
+
+@keyframes animate
+{
+    0%
+    {
+        filter: blur(60px) hue-rotate(0deg);
+    }
+
+    100%
+    {
+        filter: blur(60px) hue-rotate(360deg);
+    }
+}
+
+.form
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.form h2
+{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 24px;
+}
+.form .inputBox
+{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.form .inputBox input
+{
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #FFF;
+    outline: none;
+    font-size: 18px;
+    color: #fff;
+    padding: 5px 0;
+    font-family: Consolas;
+}
+
+::placeholder
+{
+    color: #eee;
+}
+
+.form .inputBox input[type='submit']
+{
+    background: #fff;
+    color: #000;
+    font-weight: 900;
+    max-width: 100px;
+    cursor: pointer;
+}
+
+.form p{
+    color: #eee;
+}
+
+.form p a
+{
+    color: #fff;
+}
+
+
+
+/**{*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    box-sizing: border-box;*/
+/*    font-family: 'Poppins',sans-serif;*/
+/*}*/
+.form_body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container2
+{
+    width: 100%;
+}
+.container2 h2
+{
+    width: 100%;
+    color: #45f3ff;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.container2 .erors
+{
+    width: 100%;
+    color: red;
+    font-size: 17px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.container2 .row100
+{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+.container2 .row100 .col
+{
+    position: relative;
+    width: 100%;
+    padding: 0 10px;
+    margin: 30px 0 10px;
+    transition: 0.5s;
+}
+.container2 .row100 .inputBox
+{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    color: #45f3ff;
+}
+.container2 .row100 .inputBox input,
+.container2 .row100 .inputBox.textarea textarea
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    padding: 0 10px;
+    z-index: 1;
+    /*color: #45f3ff;*/
+}
+.container2 .row100 .inputBox .text
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0 10px;
+    display: block;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.container2 .row100 .inputBox input:focus + .text,
+.container2 .row100 .inputBox input:valid + .text
+{
+    top: -35px;
+    left: -10px;
+}
+.container2 .row100 .inputBox .line
+{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #45f3ff;
+    transition: 0.5s;
+    border-radius: 2px;
+    pointer-events: none;
+}
+.container2 .row100 .inputBox input:focus ~ .line,
+.container2 .row100 .inputBox input:valid ~ .line
+{
+    height: 100%;
+}
+.container2 .row100 .inputBox.textarea
+{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 10px 0;
+}
+.container2 .row100 .inputBox.textarea textarea
+{
+    height: 100%;
+    resize: none;
+}
+.container2 .row100 .inputBox textarea:focus + .text,
+.container2 .row100 .inputBox textarea:valid + .text
+{
+    top: -35px;
+    left: -10px;
+}
+.container2 .row100 .inputBox textarea:focus ~ .line,
+.container2 .row100 .inputBox textarea:valid ~ .line
+{
+    height: 100%;
+}
+input[type="submit"]
+{
+    border: none;
+    padding: 7px 35px;
+    cursor: pointer;
+    outline: none;
+    background: #45f3ff;
+    color: #45f3ff;
+    font-size: 18px;
+    border-radius: 2px;
+}
+
+
+
+
+/*button kpoxes*/
+a,button
+{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #45f3ff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    transition: 0.2s;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+a:hover
+{
+    color: #45f3ff;
+    background: #2196f3;
+    box-shadow: 0 0 10px #2196f3,0 0 40px #2196f3,0 0 80px #2196f3;
+    transition-delay: 1s;
+}
+
+a span{
+    position: absolute;
+    display: block;
+}
+a span:nth-child(1)
+{
+    top:0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#2196f3);
+}
+
+a:hover span:nth-child(1)
+{
+    left: 100%;
+    transition: 1s;
+}
+
+a span:nth-child(3)
+{
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#2196f3);
+}
+
+a:hover span:nth-child(3)
+{
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+a span:nth-child(2)
+{
+    top:100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#2196f3);
+}
+
+a:hover span:nth-child(2)
+{
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+a span:nth-child(4)
+{
+    bottom:-100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#2196f3);
+}
+
+a:hover span:nth-child(4)
+{
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #474e5d;
+    padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+    color: #f44336;
+    cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+        width: 100%;
+    }
+}
+
+
+.botton_login{
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#registracia
+{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #21f34e;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+#registracia:hover
+{
+    color: #255784;
+    background:
+            #21f34e;
+    box-shadow: 0 0 10px #21f34e,0 0 40px #21f34e,0 0 80px #21f34e;
+    transition-delay: 1s;
+}
+
+#registracia span{
+    position: absolute;
+    display: block;
+}
+#registracia span:nth-child(1)
+{
+    top:0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#21f34e);
+}
+
+#registracia:hover span:nth-child(1)
+{
+    left: 100%;
+    transition: 1s;
+}
+
+#registracia span:nth-child(3)
+{
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#21f34e);
+}
+
+#registracia:hover span:nth-child(3)
+{
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+#registracia span:nth-child(2)
+{
+    top:100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#21f34e);
+}
+
+#registracia:hover span:nth-child(2)
+{
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+#registracia span:nth-child(4)
+{
+    bottom:-100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#21f34e);
+}
+
+#registracia:hover span:nth-child(4)
+{
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+
+
+
+
+
+
+.container
+{
+    width: 80%;
+    padding: 20px;
+}
+.container h2
+{
+    width: 100%;
+    color: #45f3ff;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.container .row100
+{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+.container .row100 .col
+{
+    position: relative;
+    width: 100%;
+    padding: 0 10px;
+    margin: 30px 0 10px;
+    transition: 0.5s;
+}
+.container .row100 .inputBox
+{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    color: #45f3ff;
+}
+.container .row100 .inputBox input,
+.container .row100 .inputBox.textarea textarea
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    padding: 0 10px;
+    z-index: 1;
+    color: #000;
+}
+.container .row100 .inputBox .text
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0 10px;
+    display: block;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.container .row100 .inputBox input:focus + .text,
+.container .row100 .inputBox input:valid + .text
+{
+    top: -35px;
+    left: -10px;
+}
+.container .row100 .inputBox .line
+{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #45f3ff;
+    transition: 0.5s;
+    border-radius: 2px;
+    pointer-events: none;
+}
+.container .row100 .inputBox input:focus ~ .line,
+.container .row100 .inputBox input:valid ~ .line
+{
+    height: 100%;
+}
+.container .row100 .inputBox.textarea
+{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 10px 0;
+}
+.container .row100 .inputBox.textarea textarea
+{
+    height: 100%;
+    resize: none;
+}
+.container .row100 .inputBox textarea:focus + .text,
+.container .row100 .inputBox textarea:valid + .text
+{
+    top: -35px;
+    left: -10px;
+}
+.container .row100 .inputBox textarea:focus ~ .line,
+.container .row100 .inputBox textarea:valid ~ .line
+{
+    height: 100%;
+}
+input[type="submit"]
+{
+    border: none;
+    padding: 7px 35px;
+    cursor: pointer;
+    outline: none;
+    background: #45f3ff;
+    color: #000;
+    font-size: 18px;
+    border-radius: 2px;
+}
+
+
+
+
+/*form registracia*/
+
+
+.registracia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #03080a;
+    font-family: 'Poppins',sans-serif;
+}
+.registracia .container
+{
+    width: 890px;
+    padding: 20px;
+}
+.registracia .container h2
+{
+    width: 100%;
+    color: #45f3ff;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.registracia .container .row100
+{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+.registracia .container .row100 .col
+{
+    position: relative;
+    width: 90%;
+    padding: 0 10px;
+    margin: 30px 0 10px;
+    transition: 0.5s;
+}
+.registracia .container .row100 .inputBox
+{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    color: #45f3ff;
+}
+.registracia .container .row100 .inputBox input,
+.registracia .container .row100 .inputBox.textarea textarea
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    padding: 0 10px;
+    z-index: 1;
+    color: #000;
+}
+.registracia .container .row100 .inputBox .text
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0 10px;
+    display: block;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.registracia .container .row100 .inputBox input:focus + .text,
+.registracia .container .row100 .inputBox input:valid + .text
+{
+    top: -35px;
+    left: -10px;
+}
+.registracia .container .row100 .inputBox .line
+{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #45f3ff;
+    transition: 0.5s;
+    border-radius: 2px;
+    pointer-events: none;
+}
+.registracia .container .row100 .inputBox input:focus ~ .line,
+.registracia .container .row100 .inputBox input:valid ~ .line
+{
+    height: 100%;
+}
+.registracia .container .row100 .inputBox.textarea
+{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 10px 0;
+}
+.registracia .container .row100 .inputBox.textarea textarea
+{
+    height: 100%;
+    resize: none;
+}
+.registracia .container .row100 .inputBox textarea:focus + .text,
+.registracia .container .row100 .inputBox textarea:valid + .text
+{
+    top: -35px;
+    left: -10px;
+}
+.registracia .container .row100 .inputBox textarea:focus ~ .line,
+.registracia .container .row100 .inputBox textarea:valid ~ .line
+{
+    height: 100%;
+}
+
+
+
+
+.text-select select
+{
+    background: #34ffec;
+    color: #1c6d7594;
+    width: 32%;
+    height: 28px;
+    border: none;
+    font-size: 14px;
+    box-shadow: 0 5px 25px rgba(0,0,0,.5);
+    -webkit-appearance: button;
+    outline: none;
+}
+
+.text-select:hover:before
+{
+    background: #1c6d7594;
+}
+
+
+
+
+
+@keyframes click-wave {
+    0% {
+        height: 40px;
+        width: 40px;
+        opacity: 0.35;
+        position: relative;
+    }
+    100% {
+        height: 200px;
+        width: 200px;
+        margin-left: -80px;
+        margin-top: -80px;
+        opacity: 0;
+    }
+}
+
+.option-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    transition: all 0.15s ease-out 0s;
+    background: #cbd1d8;
+    border: none;
+    color: #cbe638;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 0.5rem;
+    outline: none;
+    position: relative;
+    z-index: 1000;
+}
+.option-input:hover {
+    background: #21f34e;
+}
+.option-input:checked {
+    background: #40e0d0;
+}
+.option-input:checked::before {
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    content: '✔';
+    display: inline-block;
+    font-size: 26.66667px;
+    text-align: center;
+    line-height: 20px;
+}
+.option-input:checked::after {
+    -webkit-animation: click-wave 0.65s;
+    -moz-animation: click-wave 0.65s;
+    animation: click-wave 0.65s;
+    background: #40e0d0;
+    content: '';
+    display: block;
+    position: relative;
+    z-index: 100;
+}
+.option-input.radio {
+    border-radius: 50%;
+}
+.option-input.radio::after {
+    border-radius: 50%;
+}
+
+.gender {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: box;
+    color: #34ffec;
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    text-align: center;
+}
+.gender div {
+    padding: 5rem;
+}
+.gender label {
+    display: block;
+    line-height: 60px;
+    margin: 0 0 0 15%;
+}
+
+.confirm {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: box;
+    color: #34ffec;
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    text-align: center;
+}
+.confirm div {
+    padding: 5rem;
+}
+.confirm label {
+    display: block;
+    line-height: 60px;
+    margin: 0 0 0 15%;
+}
+
+.confirm label a
+{
+    font-size: 14px;
+    display: inline-flex;
+    padding: 0;
+    letter-spacing: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+.envelope
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    background: none;
+    color: #45f3ff;
+    width: 100%;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: .5s;
+    opacity: .5;
+}
+
+.envelope:hover
+{
+   opacity: 1;
+}
+
+.overlay
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #060c0c;
+    transition: .5s;
+    transform: scale(0);
+}
+
+.overlay.active
+{
+    transform: scale(1);
+    z-index: 1;
+}
+
+.newsletter
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50%;
+    height: auto;
+    min-height: 300px;
+    background: #262164;
+    box-shadow: 0 10px 15px rgba(0,0,0,.5);
+    padding: 40px 60px 60px;
+    box-sizing: border-box;
+}
+
+.newsletter .close
+{
+    position: absolute;
+    top: -24px;
+    right: -24px;
+    color: #fff;
+    cursor: pointer;
+    background: #e91e63;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    line-height: 40px;
+    text-align: center;
+    font-size: 20px;
+    border: 4px solid #fff;
+}
+
+.newsletter .close i
+{
+    color: #34ffec;
+}
+
+.icons
+{
+    color: #45f3ff;
+    font-size: 80px;
+    text-align: center;
+}
+
+.newsletter h1
+{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #45f3ff;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 300;
+    font-size: 48px;
+    text-transform: uppercase;
+}
+
+.newsletter p
+{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #45f3ff;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.subscribe-form
+{
+    position: relative;
+    margin-top: 40px;
+}
+
+.subscribe-form .f-p-i
+{
+    width: 100%;
+    height: 60px;
+    border-radius: 60px;
+    border: none;
+    outline: none;
+    padding: 20px;
+    padding-right: 200px;
+    box-sizing: border-box;
+    font-size: 24px;
+    background: rgba(255,255,255,.1);
+    color: #fff;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 300;
+}
+
+.subscribe-form .f-p-i::placeholder
+{
+    color: rgba(200,200,255,.5);
+}
+
+.subscribe-form .f-p-b
+{
+    width: 200px;
+    height: 60px;
+    border-radius: 60px;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #00bcd4;
+    color: #124434;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 300;
+    cursor: pointer;
+    transition: .5s;
+    font-size: 24px;
+}
+
+.subscribe-form .f-p-b span
+{
+    position: relative;
+    top: 15px;
+    left: 70px;
+}
+
+
+.subscribe-form .forgot-password:hover
+{
+    background: #e91e63;
+}
+
+.error-msg {
+    position: relative;
+    top: 50px;
+    color: red;
+}
+
+.gender .error-msg {
+    top: 40px;
+    right: 270px;
+}
+
+.confirm .error-msg {
+    top: 40px;
+    right: 270px;
+}
+
+.text-select .error-msg{
+    top: 12px;
+}
+
+.day.errors,.months.errors,.year.errors,.form_errors{
+    border: 1px solid red;
+}
+
+
+
+
+
+
+.form-body {
+    padding: 10px;
+}
+.form-body .row {
+    display: -webkit-box;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+.form-body .row input[type="text"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    margin: 0 15px;
+    height: 35px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background: #e8ebed;
+    color: #576366;
+    font-size: 14px;
+}
+.rule {
+    height: 2px;
+    background: #e8ebed;
+    margin: 0px 35px;
+}
+
+ .form-footer {
+    margin: 0 25px 15px 25px;
+    padding: 15px 10px;
+}
+ .form-footer a {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    background: #27ae60;
+    margin-right: 10px;
+    font-size: 14px;
+}
+ .form-footer span {
+    margin-left: 8px;
+}
