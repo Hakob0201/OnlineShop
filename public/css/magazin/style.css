@@ -1165,3 +1165,102 @@ figure.effect-goliath:hover p {
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
 }
 
+
+
+
+/*shop fail upl css*/
+
+.fail_container #one p
+{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    color: #23a296;
+    border-bottom: 1px solid #15524c;
+    /* background-color: #142927; */
+    outline: 0;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    letter-spacing: 1.4px;
+    float: none;
+    border-top: 1px solid #15524c;
+    font-size: 12px;
+    text-align: center;
+}
+
+.fail_container #one #uploader_file
+{
+    width: 100%;
+    box-sizing: border-box;
+    color: #23a296;
+    outline: 0;
+    padding: 10px;
+    letter-spacing: 1.4px;
+    float: none;
+    border-bottom: 1px solid #15524c;
+}
+
+
+.fail_container #one #uploader_file .uploadDoc
+{
+    display: flex;
+}
+
+.fail_container #one #uploader_file .fileUpload
+{
+    background-color: transparent;
+    border-color: #34ffec!important;
+    color: #777;
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.fail_container #one #uploader_file .fileUpload img
+{
+    border-style: none;
+    width: 40px;
+    cursor: pointer;
+    height: auto;
+}
+.fail_container .fileUpload input.upload
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    /* font-size: 20px; */
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+}
+.fail_container #one .btn-check
+{
+    cursor: pointer;
+    line-height: 54px;
+    color: red;
+}
+
+.fail_container #one  .text-center
+{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    color: #23a296;
+    border-bottom: 1px solid #15524c;
+    outline: 0;
+    padding: 10px;
+    margin-bottom: 10px;
+    letter-spacing: 1.4px;
+    float: none;
+}
+
+.fail_container #one  .text-center a
+{
+    cursor: pointer;
+}
